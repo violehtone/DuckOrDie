@@ -18,6 +18,12 @@ public class GameOverState extends State {
     public GameOverState(int points, int level) {
         this.highScore = points;
         this.levelReached = level;
+
+        if(highScore > MainActivity.getHighScore()) {
+            MainActivity.setHighScore(highScore);
+        }else{
+
+        }
     }
 
     @Override
@@ -38,14 +44,14 @@ public class GameOverState extends State {
 
         g.setColor(Color.WHITE);
         g.setFont(Typeface.DEFAULT_BOLD, 150);
-        g.drawString("GAME OVER", 220, 270);
+        g.drawString("GAME OVER", 220, 200);
 
         g.setFont(Typeface.DEFAULT_BOLD, 60);
         g.setColor(Color.GREEN);
-        g.drawString("Ducks killed: " + highScore, 430, 370);
+        g.drawString("Ducks killed: " + highScore, 430, 340);
         g.setColor(Color.GREEN);
         g.setFont(Typeface.DEFAULT_BOLD, 40);
-        g.drawString("You reached level " + levelReached, 415, 440);
+        g.drawString("You reached level " + levelReached, 460, 410);
         continuebutton.render(g);
     }
 

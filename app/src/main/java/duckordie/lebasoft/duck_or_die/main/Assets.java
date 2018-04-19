@@ -18,7 +18,8 @@ public class Assets {
 
     private static SoundPool soundPool;
     //Backgrounds
-    public static Bitmap playstate, storystate, menustate, selectLevelState, selectWeaponState, seastate, winterstate;
+    public static Bitmap playstate, storystate, menustate, selectLevelState, selectWeaponState, seastate, winterstate, highscoreState,
+    howtoplaystate1, howtoplaystate2, howtoplaystate3, howtoplaystate4, howtoplaystate5, howtoplaystate6, howtoplaystateBG;
     //Buttons
     public static Bitmap newgamebutton, continuebutton, howtoplaybutton, highscorebutton, shootButton, loadButton,
             level1state, level2state, level3state, rifleImage, bazookaImage, pistolImage, buttonSpace,
@@ -30,7 +31,7 @@ public class Assets {
                         pistol, pistolAim, pistol_shot;
     public static int themeMusic, gunshot, loadgun, bazookaSound;
     private static MediaPlayer mediaPlayer;
-    public static Animation duckAnim, duckAnimR;
+    public static Animation duckAnim, duckAnimR, howtoplayAnim;
 
     public static void load() {
         //Backgrounds
@@ -42,6 +43,16 @@ public class Assets {
         selectLevelState = loadBitmap("SelectLevelState.png", false);
         menustate = loadBitmap("menuscreen.png", false);
         selectWeaponState = loadBitmap("SelectWeaponState.png", false);
+        highscoreState = loadBitmap("highscoreState.png", false);
+
+        howtoplaystate1 = loadBitmap("howtoplay1.png", false);
+        howtoplaystate2 = loadBitmap("howtoplay2.png", false);
+        howtoplaystate3 = loadBitmap("howtoplay3.png", false);
+        howtoplaystate4 = loadBitmap("howtoplay4.png", false);
+        howtoplaystate5 = loadBitmap("howtoplay5.png", false);
+        howtoplaystate6 = loadBitmap("howtoplay6.png", false);
+        howtoplaystateBG = loadBitmap("howtoplaystate_background.png", false);
+
 
         //Buttons
         newgamebutton = loadBitmap("newgamebutton.png", false);
@@ -103,6 +114,15 @@ public class Assets {
         Frame f11 = new Frame(duckRight1, .1f);
         Frame f12 = new Frame(duckRight2, .1f);
         duckAnimR = new Animation(f11, f12);
+
+        Frame htp1 = new Frame(howtoplaystate1, 1f);
+        Frame htp2 = new Frame(howtoplaystate2, 3f);
+        Frame htp3 = new Frame(howtoplaystate3, 5f);
+        Frame htp4 = new Frame(howtoplaystate4, 5f);
+        Frame htp5 = new Frame(howtoplaystate5, 8f);
+        Frame htp6 = new Frame(howtoplaystate6, 8f);
+        howtoplayAnim = new Animation(htp1, htp2, htp3, htp4, htp5, htp6);
+
     }
 
     private static Bitmap loadBitmap(String filename, boolean transparency) {

@@ -120,52 +120,9 @@ public class Level1State extends State {
 
         if (levelCounter % 300 == 0) {
             level ++;
-            duckL.increaseSpeed(2);
-            duckR.increaseSpeed(2);
+            duckL.increaseSpeed(1);
+            duckR.increaseSpeed(1);
         }
-
-        /*
-        //LEVELS 1-10
-        if (levelCounter < 300) {
-            level = 1;
-        }
-        if (levelCounter == 300) {
-            level = 2;
-            duckL.increaseSpeed(2);
-            duckR.increaseSpeed(2);
-        } else if (levelCounter == 600) {
-            level = 3;
-            duckL.increaseSpeed(1);
-            duckR.increaseSpeed(1);
-        } else if (levelCounter == 900) {
-            level = 4;
-            duckL.increaseSpeed(2);
-            duckR.increaseSpeed(2);
-        } else if (levelCounter == 1200) {
-            level = 5;
-            duckL.increaseSpeed(1);
-            duckR.increaseSpeed(1);
-        } else if (levelCounter == 1500) {
-            level = 6;
-            duckL.increaseSpeed(2);
-            duckR.increaseSpeed(2);
-        } else if (levelCounter == 1800) {
-            level = 7;
-            duckL.increaseSpeed(1);
-            duckR.increaseSpeed(1);
-        } else if (levelCounter == 2100) {
-            level = 8;
-            duckL.increaseSpeed(2);
-            duckR.increaseSpeed(2);
-        } else if (levelCounter == 2400) {
-            level = 9;
-            duckL.increaseSpeed(1);
-            duckR.increaseSpeed(1);
-        } else if (levelCounter == 2700) {
-            level = 10;
-            duckL.increaseSpeed(1);
-            duckR.increaseSpeed(1);
-        }*/
     }
 
     @Override

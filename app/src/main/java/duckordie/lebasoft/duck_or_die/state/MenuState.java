@@ -37,10 +37,16 @@ public class MenuState extends State {
     public boolean onTouch(MotionEvent e, int scaledX, int scaledY) {
         if (e.getAction() == MotionEvent.ACTION_DOWN) {
             newgamebutton.onTouchDown(scaledX, scaledY);
+            highscorebutton.onTouchDown(scaledX, scaledY);
+            howtoplaybutton.onTouchDown(scaledX, scaledY);
         }
         if (e.getAction() == MotionEvent.ACTION_UP) {
             if (newgamebutton.isPressed(scaledX, scaledY)) {
                 setCurrentState(new SelectLevelState());
+            }else if(highscorebutton.isPressed(scaledX, scaledY)) {
+                setCurrentState(new HighScoreState());
+            }else if(howtoplaybutton.isPressed(scaledX, scaledY)) {
+                setCurrentState(new HowToPlayState());
             }
         }
         return true;

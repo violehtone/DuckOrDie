@@ -1,7 +1,6 @@
 package duckordie.lebasoft.duck_or_die.state;
 
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.view.MotionEvent;
 
 import duckordie.lebasoft.duck_or_die.main.Assets;
@@ -9,32 +8,26 @@ import duckordie.lebasoft.duck_or_die.main.MainActivity;
 import duckordie.lebasoft.duck_or_die.util.Painter;
 import duckordie.lebasoft.duck_or_die.util.UIbutton;
 
-public class HighScoreState extends State {
+public class HowToPlayState extends State{
 
-    private String highScore;
     private UIbutton continueButton;
-    private String level;
+
 
     @Override
     public void init() {
-        highScore = MainActivity.getHighScore() + "";
-        continueButton = new UIbutton(348, 500, 931, 608, Assets.continuebutton, Assets.continuebutton);
+        continueButton = new UIbutton(348, 600, 931, 708, Assets.continuebutton, Assets.continuebutton);
     }
 
     @Override
     public void update(float delta) {
-
+        Assets.howtoplayAnim.update(delta);
     }
 
     @Override
     public void render(Painter g) {
-        g.drawImage(Assets.highscoreState, 0, 0, MainActivity.GAME_WIDTH, MainActivity.GAME_HEIGHT);
+        g.drawImage(Assets.howtoplaystateBG, 0, 0, MainActivity.GAME_WIDTH, MainActivity.GAME_HEIGHT);
+        Assets.howtoplayAnim.render(g, 208, 147, 864, 427);
         continueButton.render(g);
-        g.setColor(Color.WHITE);
-        g.setFont(Typeface.DEFAULT_BOLD, 150);
-        g.drawString(highScore, 550, 350);
-        g.setFont(Typeface.DEFAULT_BOLD, 40);
-        g.drawString("Ducks shot", 530, 420);
     }
 
     @Override
