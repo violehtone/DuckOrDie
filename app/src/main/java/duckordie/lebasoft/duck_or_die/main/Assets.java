@@ -19,7 +19,8 @@ public class Assets {
     private static SoundPool soundPool;
     //Backgrounds
     public static Bitmap playstate, storystate, menustate, selectLevelState, selectWeaponState, seastate, winterstate, highscoreState,
-    howtoplaystate1, howtoplaystate2, howtoplaystate3, howtoplaystate4, howtoplaystate5, howtoplaystate6, howtoplaystateBG;
+    howtoplaystate1, howtoplaystate2, howtoplaystate3, howtoplaystate4, howtoplaystate5, howtoplaystate6, howtoplaystateBG,
+    howtoplaystate7, howtoplaystate8, howtoplaystate9, howtoplaystate10, howtoplaystate11, howtoplaystate12;
     //Buttons
     public static Bitmap newgamebutton, continuebutton, howtoplaybutton, highscorebutton, shootButton, loadButton,
             level1state, level2state, level3state, rifleImage, bazookaImage, pistolImage, buttonSpace,
@@ -51,6 +52,12 @@ public class Assets {
         howtoplaystate4 = loadBitmap("howtoplay4.png", false);
         howtoplaystate5 = loadBitmap("howtoplay5.png", false);
         howtoplaystate6 = loadBitmap("howtoplay6.png", false);
+        howtoplaystate7 = loadBitmap("howtoplay7.png", false);
+        howtoplaystate8 = loadBitmap("howtoplay8.png", false);
+        howtoplaystate9 = loadBitmap("howtoplay9.png", false);
+        howtoplaystate10 = loadBitmap("howtoplay10.png", false);
+        howtoplaystate11 = loadBitmap("howtoplay11.png", false);
+        howtoplaystate12 = loadBitmap("howtoplay12.png", false);
         howtoplaystateBG = loadBitmap("howtoplaystate_background.png", false);
 
 
@@ -115,13 +122,19 @@ public class Assets {
         Frame f12 = new Frame(duckRight2, .1f);
         duckAnimR = new Animation(f11, f12);
 
-        Frame htp1 = new Frame(howtoplaystate1, 1f);
+        Frame htp1 = new Frame(howtoplaystate1, 3f);
         Frame htp2 = new Frame(howtoplaystate2, 3f);
-        Frame htp3 = new Frame(howtoplaystate3, 5f);
-        Frame htp4 = new Frame(howtoplaystate4, 5f);
-        Frame htp5 = new Frame(howtoplaystate5, 8f);
-        Frame htp6 = new Frame(howtoplaystate6, 8f);
-        howtoplayAnim = new Animation(htp1, htp2, htp3, htp4, htp5, htp6);
+        Frame htp3 = new Frame(howtoplaystate3, 3f);
+        Frame htp4 = new Frame(howtoplaystate4, 3f);
+        Frame htp5 = new Frame(howtoplaystate5, 3f);
+        Frame htp6 = new Frame(howtoplaystate6, 3f);
+        Frame htp7 = new Frame(howtoplaystate7, 3f);
+        Frame htp8 = new Frame(howtoplaystate8, 3f);
+        Frame htp9 = new Frame(howtoplaystate9, 3f);
+        Frame htp10 = new Frame(howtoplaystate10, 3f);
+        Frame htp11 = new Frame(howtoplaystate11, 3f);
+        Frame htp12 = new Frame(howtoplaystate12, 3f);
+        howtoplayAnim = new Animation(htp1, htp2, htp3, htp4, htp5, htp6, htp7, htp8, htp9, htp10, htp11, htp12);
 
     }
 

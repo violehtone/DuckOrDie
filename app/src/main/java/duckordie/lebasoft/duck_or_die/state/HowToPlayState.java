@@ -15,7 +15,7 @@ public class HowToPlayState extends State{
 
     @Override
     public void init() {
-        continueButton = new UIbutton(348, 600, 931, 708, Assets.continuebutton, Assets.continuebutton);
+        continueButton = new UIbutton(348, 610, 931, 718, Assets.continuebutton, Assets.continuebutton);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class HowToPlayState extends State{
     @Override
     public void render(Painter g) {
         g.drawImage(Assets.howtoplaystateBG, 0, 0, MainActivity.GAME_WIDTH, MainActivity.GAME_HEIGHT);
-        Assets.howtoplayAnim.render(g, 208, 147, 864, 427);
+        Assets.howtoplayAnim.render(g, 123, 120, 1034, 572);
         continueButton.render(g);
     }
 
